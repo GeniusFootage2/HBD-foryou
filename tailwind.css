@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-multiple {
+  background-image: url("IMG/home/kue.png"), url("IMG/home/letusan.png"), url("IMG/home/benang.png"), url("IMG/home/bunga_api.png"), url("IMG/home/kado.png");
+  background-size: 30rem, 30rem, 11rem, 19rem, 30rem;
+  background-position: -7rem 17.3rem, -2rem -3rem, 86rem -3rem, 26rem 28rem, 64rem 19rem;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+/* font hbd */
+@font-face {
+  font-family: "waterlily";
+  src: url("/font/waterlily-script.ttf") format("truetype");
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+/* spotify */
+.grow {
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out 0.5s;
+}
+.group:hover .grow {
+  width: 100%;
+  height: 100%;
+}
