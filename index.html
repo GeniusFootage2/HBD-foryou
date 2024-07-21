@@ -6,42 +6,58 @@
     <link href="./style.css" rel="stylesheet" />
     <title>HBD SHAE</title>
   </head>
-  <body class="bg- multiple h-screen overflow-x-hidden w-screen">
-    <!-- Home Section -->
-    <div id="spotify" class="fixed top-[32rem] left-10 z-50 h-40 w-40 bg-gray-400 group">
-      <video autoplay loop muted poster="thumbnail.jpg" class="absolute z-20 bottom-0 left-0 w-11 h-11 rounded-lg transition-all duration-1000 group-hover:hidden">
-          <source src="animation/lv_0_20240704151950.mp4" type="video/webm" />
-      </video>
-      <div id="music" class="absolute z-10 bottom-0 left-0 h-11 w-11 bg-blue-600 transition-all duration-1000 grow"></div>
-      <div id="music" class="absolute z-10 bottom-0 left-0 h-11 w-11 bg-blue-600 transition-all duration-1000 hidden"></div>
-    
-  </div>
-    </div>
-      <!-- End Video -->
+  <body class= overflow-x-hidden w-screen">
 
-      <!-- Years Section -->
-      <div class="flex-1 relative years">
-        <!-- <p class="relative top-80 text-16">16</p>
-        <p class="relative left-36rem top-36 text-3xl">th</p>
-        <p class="fixed left-4 font-mono top-[43rem]">2024-07-24</p> -->
+    <div id="countdown" class="absolute z-50 bg-gray-100 flex items-center justify-center h-screen w-screen">
+      <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+        <h1 class="text-4xl font-bold mb-4">Terbuka Dalam:</h1>
+        <div id="timer" class="text-6xl font-mono"></div>
       </div>
-      <!-- End Years Section -->
-      <!-- ucapan -->
-      <!-- <div class="flex-1 ucapan">
+    </div>
+
+      <!-- Hidden Content Section -->
+  <div id="hiddenContent" class="hidden items-center justify-center h-screen">
+  <!-- Home Section -->
+  <div id="spotify" class="fixed top-[33rem] left-4 z-50 h-40 w-40 group">
+    <video autoplay loop muted poster="thumbnail.jpg" class="absolute z-20 bottom-0 left-0 w-11 h-11 rounded-xl transition-all duration-1000 group-hover:hidden">
+      <source src="animation/lv_0_20240704151950.mp4" type="video/webm" />
+    </video>
+    <div id="music" class="absolute z-10 bottom-0 left-0 h-11 w-11 bg-black transition-all rounded-xl  duration-1000 grow"></div>
+  </div>
+  <!-- End Video -->
+
+  <div class="flex h-screen w-screen overflow-hidden bg-multiple">
+    <!-- Years Section -->
+    <div class="flex-1 relative years">
+      <p class="relative top-80 text-16">16</p>
+      <p class="relative left-36rem top-36 text-3xl">th</p>
+      <p class="fixed left-4 font-mono top-[43rem]">2024-07-24</p>
+    </div>
+    <!-- End Years Section -->
+
+    <!-- Ucapan Section -->
+    <div id="ucapan" class="flex-1 ucapan">
       <h1 class="relative text-8xl font-waterlily -right-96 top-40">HAPPY</h1>
       <h1 class="relative text-9xl font-waterlily -right-28 top-40">BIRTHDAY</h1>
       <h2 class="relative text-4xl -right-32 top-40">Gelsy Khalilah Sharliz Imron</h2>
-    </div> -->
-      <!-- end ucapan -->
     </div>
+    <!-- End Ucapan Section -->
+  </div>
+  <!-- End Home Section -->
 
-    <!-- End Home Section -->
+  <!-- Puisi Section -->
+  <div id="toggleButton" class="text-center h-screen flex items-center justify-center min-h-screen">
+    <p id="box" class="mt-4 w-32 h-32 contents">click to continue</p>
+  </div>
+  <!-- End Puisi Section -->
 
-    <!-- Puisi Section -->
-    <div id="toggleButton" class="text-center h-screen flex items-center justify-center min-h-screen">
-      <p id="box" class="mt-4 w-32 h-32 contents">click to continue</p>
-    </div>
-    <!-- End Puisi Section -->
+  <!-- Countdown Section -->
+
+  <!-- End Countdown Section -->
+
+
+  </div>
+  <!-- End Hidden Content Section -->
 
     <script src="/Home.js"></script>
   </body>
