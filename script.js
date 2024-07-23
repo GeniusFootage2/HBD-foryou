@@ -1,16 +1,43 @@
-// animasi
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.getElementById("toggleButton");
-  const box = document.getElementById("box");
+// letter
 
-  toggleButton.addEventListener("click", function () {
-    box.classList.toggle("contents");
-    toggleButton.classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+  // Animasi
+  const second = document.getElementById("second");
+  const first = document.getElementById("first");
+  const remov = document.getElementById("remov");
+  const finish = document.getElementById("finish");
+
+  first.addEventListener("click", function () {
+    finish.classList.add("slide-out-fwd-center");
+    // Tambahkan delay 1 detik sebelum menjalankan fungsi
+    // setTimeout(function() {
+    //   first.classList.add("hidden");
+    //   remov.classList.add("hidden");
+    //   second.classList.remove("hidden");
+    // }, 1000); // 1000 ms = 1 detik
   });
 });
+
+
+// Animasi
+
 document.addEventListener("DOMContentLoaded", function () {
-  const spotify = document.getElementById("spotify");
+  const toggleButton = document.getElementById("toggleButton");
+  const hbd = document.getElementById("hbd");
   const video = document.getElementById("video");
+  const videos = document.getElementById("myVideo");
+
+  toggleButton.addEventListener("click", function () {
+    toggleButton.classList.add("hidden");
+    hbd.classList.remove("hidden");
+    videos.play();
+
+    // Pastikan volume video diatur ke nilai yang tidak nol
+    video.volume = 1.0;
+  });
+
+  // Spotify
+  const spotify = document.getElementById("spotify");
   const music = document.getElementById("music");
 
   spotify.addEventListener("mouseover", function () {
@@ -24,35 +51,42 @@ document.addEventListener("DOMContentLoaded", function () {
     video.classList.remove("hidden");
     music.classList.add("hidden");
   });
+
+// next
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Animasi
+  const after = document.getElementById("after");
+  const before = document.getElementById("before");
+  const one = document.getElementById("one");
+  const two = document.getElementById("two");
+
+  one.addEventListener("click", function () {
+    before.classList.add("hidden");
+    one.classList.add("hidden");
+    after.classList.remove("hidden");
+    two.classList.remove("hidden");
+  });
 });
 
-// Set the date we're counting down to
-var countDownDate = new Date("Jul 24, 2024 00:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function () {
+  // Animasi
+  const before = document.getElementById("before");
+  const after = document.getElementById("after");
+  const two = document.getElementById("two");
+  const myVideo = document.getElementById("myVideo");
+  const one = document.getElementById("one");
+  const happyer = document.getElementById("toggleButton");
+  const happy = document.getElementById("hbd");
 
-// Update the countdown every 1 second
-var x = setInterval(function() {
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the countdown date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes, and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="timer"
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-  // If the countdown is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-
-    // Hide the countdown and show the hidden content
-    document.getElementById("countdown").classList.add("hidden");
-    document.getElementById("hiddenContent").classList.remove("hidden");
-  }
-}, 1000);
+  two.addEventListener("click", function () {
+    after.classList.add("hidden");
+    two.classList.add("hidden");
+    happyer.classList.remove("hidden");
+    before.classList.remove("hidden");
+    one.classList.remove("hidden");
+    happy.classList.add("hidden");
+    myVideo.pause();
+  });
+});
+});

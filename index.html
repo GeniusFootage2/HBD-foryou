@@ -6,60 +6,83 @@
     <link href="./style.css" rel="stylesheet" />
     <title>HBD SHAE</title>
   </head>
-  <body class= overflow-x-hidden w-screen">
+  <body class= "overflow-x-hidden w-screen">
 
-    <div id="countdown" class="absolute z-50 bg-gray-100 flex items-center justify-center h-screen w-screen">
-      <div class="bg-white p-10 rounded-lg shadow-lg text-center">
-        <h1 class="text-4xl font-bold mb-4">Terbuka Dalam:</h1>
-        <div id="timer" class="text-6xl font-mono"></div>
-      </div>
+<!-- letter -->
+<!-- <div id="remov" class="flex items-center justify-center h-screen bg-gray-200">
+  <div id="first" class="surat flex flex-col items-center justify-center cursor-pointer">
+    <div id="finish" class="">
+    <div class="swing-in-bottom-fwd relative  h-44 w-64 " style="
+    border-left: 8rem solid transparent;
+    border-right: 8rem solid transparent;
+    border-bottom: 100px solid rgb(244 114 182);">
     </div>
+    <div class="swing-in-top-bck relative z-50 h-44 w-64  " style="
+    border-left: 8rem solid transparent;
+    border-right: 8rem solid transparent;
+    border-top: 100px solid rgb(255, 255, 255);">
+    </div>
+    <div class="relative transition-all -mt-44 duration-500 h-44 w-64 bg-pink-400 group-hover:h-52 group-hover:w-72"> 
+    </div>
+  </div>
+  </div>
+</div> -->
+<!-- end letter -->
 
-      <!-- Hidden Content Section -->
-  <div id="hiddenContent" class="hidden items-center justify-center h-screen">
   <!-- Home Section -->
-  <div id="spotify" class="fixed top-[33rem] left-4 z-50 h-40 w-40 group">
-    <video autoplay loop muted poster="thumbnail.jpg" class="absolute z-20 bottom-0 left-0 w-11 h-11 rounded-xl transition-all duration-1000 group-hover:hidden">
-      <source src="animation/lv_0_20240704151950.mp4" type="video/webm" />
-    </video>
-    <div id="music" class="absolute z-10 bottom-0 left-0 h-11 w-11 bg-black transition-all rounded-xl  duration-1000 grow"></div>
-  </div>
-  <!-- End Video -->
+<!-- <div id="second" class="hidden"> -->
 
-      <!-- Years Section -->
-      <div class="flex h-screen w-screen overflow-hidden bg-multiple">
-        <!-- Years Section -->
-        <div class="flex-1 relative years">
-          <p class="relative top-80 text-16">16</p>
-          <p class="relative left-36rem top-36 text-3xl">th</p>
-          <p class="fixed left-4 font-mono top-[43rem]">2024-07-24</p>
-        </div>
-        <!-- End Years Section -->
-        <div class="flex h-screen w-screen overflow-hidden bg-multiple">
-        <!-- Ucapan Section -->
-        <div id="ucapan" class="flex-1 ucapan">
-      <h1 class="relative text-8xl font-waterlily -right-96 top-40">HAPPY</h1>
-      <h1 class="relative text-9xl font-waterlily -right-28 top-40">BIRTHDAY</h1>
-      <h2 class="relative text-4xl -right-32 top-40">Gelsy Khalilah Sharliz Imron</h2>
+  <video id="one" autoplay loop muted poster="/animation/Fast-Forward.webm" class="absolute z-50 shadow-xl bottom-8 right-4 w-11 h-11 rounded-xl transition-all duration-500 hover:w-16 hover:h-16">
+    <source src="animation/Fast-Forward.webm"/>
+  </video>
+<div id="before" class="">
+
+
+<a href="https://open.spotify.com/intl-id/album/75KyCmWatZRvlMcMRed9BG?si=xgVQXBExT5ijClxWjC87Ig&nd=1&dlsi=9e15fced8d254cbb">
+    <video autoplay loop muted poster="/animation/spotify.webm" class="absolute bounce-in-left left-4 z-20 bottom-10 cursor-pointer w-11 h-11 rounded-xl transition-all duration-1000 hover:h-14 hover:w-14">
+      <source src="animation/spotify.webm" type="video/webm" />
+    </video></a>
+  <!-- End Video -->
+  <div class="flex h-screen w-screen overflow-hidden bg-multiple fade-in">
+    <!-- Years Section -->
+    <div class="flex-1 relative years">
+      <p class="relative slide-in-fwd-center top-80 text-16">16</p>
+      <p class="relative scale-in-tl left-36rem top-36 text-3xl">th</p>
+      <p class="absolute scale-in-bl left-4 font-mono top-[43rem]">2024-07-24</p>
     </div>
-      <!-- end ucapan -->
+    <!-- End Years Section -->
+    <!-- ucapan -->
+    <div id="ucapan" class="flex-1 ucapan">
+    <h1 class="slide-in-blurred-tr relative text-8xl font-waterlily -right-96 top-40">HAPPY</h1>
+    <h1 class="slide-in-blurred-br relative text-9xl font-waterlily -right-28 top-40">BIRTHDAY</h1>
+    <h2 class="fade-in relative text-4xl -right-32 top-40">Gelsy Khalilah Sharliz Imron</h2>
     </div>
-    <!-- End Ucapan Section -->
+    <!-- end ucapan -->
   </div>
+</div>
+
   <!-- End Home Section -->
 
   <!-- Puisi Section -->
-  <div id="toggleButton" class="text-center h-screen flex items-center justify-center min-h-screen">
-    <p id="box" class="mt-4 w-32 h-32 contents">click to continue</p>
+  <video id="two" autoplay loop muted poster="/animation/Fast-Forward.webm" class="fixed rotate-180 hidden z-50 shadow-xl bottom-8 left-4 w-11 h-11 rounded-xl transition-all duration-500 hover:w-16 hover:h-16">
+    <source src="animation/Fast-Forward.webm"/>
+  </video>
+
+<div id="after" class="hidden fade-in h-screen w-screen overflow-hidden">
+
+  <div id="toggleButton" class="absolute z-40 flex items-center justify-center h-screen w-screen bg-transparent">
+    <p id="box" class="mt-4 flex items-center justify-center text-center text-black w-screen h-screen cursor-pointer text-4xl font-waterlily">click to continue</p>
   </div>
-  <!-- End Puisi Section -->
 
-  <!-- Countdown Section -->
-
-  <!-- End Countdown Section -->
-
+  <div id="hbd" class="fade-in hidden ">
+    <video id="myVideo" src="/animation/hbd.webm" class="-top-2" ></video>
+  </div>
 
   </div>
+
+</div>
+</div>
+</div>
   <!-- End Hidden Content Section -->
 
     <script src="script.js"></script>
